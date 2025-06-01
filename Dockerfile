@@ -15,5 +15,5 @@ RUN composer install --no-dev --optimize-autoloader
 RUN cp .env.example .env
 RUN php artisan key:generate
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-CMD ["php-fpm"]
-EXPOSE 9000
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+EXPOSE 8000
