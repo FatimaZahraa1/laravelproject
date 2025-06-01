@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: laravelproject
+    env: docker
+    dockerfilePath: Dockerfile
+    branch: main
+    instanceType: starter
+    autoDeploy: true
+    ports:
+      - 9000
